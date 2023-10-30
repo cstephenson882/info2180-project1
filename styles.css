@@ -1,4 +1,9 @@
 /* Add your CSS to this file */
+
+:root{
+    --green-color: green; 
+    --testing-background-color: lightblue;
+}
 body {
     margin: 0;
     font-size: 16px;
@@ -8,4 +13,172 @@ body {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    
+}
+header .container {
+    display: grid;
+    /* flex-direction: center;
+    flex-direction: row; */
+    
+    /* flex-direction: column; */
+    /* display: inline; */
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    /* grid-template-rows: 1fr; */
+}
+
+header h1 {
+    grid-column: 1/2;
+}
+
+/*  */
+header h1, header li {
+    font-size: 18px;
+    
+}
+
+header nav{
+    grid-column: 3/4;
+}
+
+li{
+    display: inline;
+    /* up to part 3 */
+}
+
+.overview-hero {
+    background-color: grey; /*color to be updated*/
+    width: max;
+    height: 300px;
+}
+
+.overview-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overview-hero-image{
+    width: 200px;
+    height: 150px;
+    /* margin: 30px; */
+    /* float: left; */
+    
+}
+.overview-hero-text {
+    width: 30em;
+}
+.overview-hero .container{
+    gap: 30px;  
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* align-items: center; */
+    /* align-content: center; */
+    
+    /* flex-wrap: wrap; */
+    /* grid-template-columns: ; */
+}
+
+/*  Leanrn about styling */
+.learn-about .container {
+    /* background-color: yellow; */
+    /* height: 750px; */
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 0.1fr 1fr;
+    gap: 10px;
+}
+
+
+.learn-about h2 {
+    grid-row: 1;
+    grid-column: 1/4;
+    
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+/* Styling the testting section */
+.testing {
+    background-color: var(--testing-background-color); /* to be updated*/
+    height: 200px;
+}
+
+.testing .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+   
+
+}
+
+.cta , .testing-description, .testing{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+/* Stories section */
+.stories img{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 30px;
+}
+
+.stories .container {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr; */
+    grid-template-rows: 0.2fr 1fr 1fr;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green-color);
+    height: 250px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.newsletter .container {
+    display:flex ;
+    flex-direction: column;
+    width: 500px;
+    
+    
+}
+
+.newsletter h3 {
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    /* grid-tem */
+
+}
+.newsletter button {
+    margin-left: 30px;
+    
+}
+
+
+footer{
+    background-color: var(--testing-background-color);
+    margin: 0px;
+    height: 100px;
 }
