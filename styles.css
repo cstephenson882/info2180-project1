@@ -4,7 +4,6 @@
 :root{
     --hero-overview-color: #E2E8F0;
     --green-color: green; 
-    
     --covid19-test-bacckground-color: #4A5568;
     --nav-link-color: #6b7280;
     --nav-link-hover-color: #5A67D8;
@@ -12,13 +11,14 @@
     --footer-background-color: #4A5568;
 
 }
+
 *{
+    /* default font size */
     font-size: 18px;
 }
 
 body {
-   
-    font-size: 16px;
+    /* font-size: 16px; */
     display: flex;
     flex-direction: column;
     /* background-color: aquamarine; */
@@ -95,7 +95,7 @@ a:hover{
 }
 .overview-hero-image{
     width: 200px;
-    height: 150px;
+    height: 200px;
     /* margin: 30px; */
     /* float: left; */
     
@@ -108,24 +108,14 @@ a:hover{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    /* align-items: center; */
-    /* align-content: center; */
-    
-    /* flex-wrap: wrap; */
-    /* grid-template-columns: ; */
+
 }
 
-.overview-hero h2{
-    /* color: #48BB78; */
-    /* font-size: 24px; */
-}
+
 
 /*  Leanrn about styling */
 .learn-about .container {
-    /* background-color: yellow; */
-    /* height: 750px; */
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-template-rows: 0.1fr 1fr;
     gap: 10px;
 }
@@ -135,10 +125,10 @@ a:hover{
 }
 
 .learn-about .card img{
-    width: 200px;
-    height: 200px;
-    /* display: flex;
-    justify-content: center; */
+    width: 270px;
+    height: 270px;
+    /* background-color: lightcyan;
+    margin: 0px; */
 }
 
 .learn-about .cards{
@@ -224,7 +214,7 @@ a:hover{
     float: left;
     margin-right: 30px;
     border-radius: 50%;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 .stories .container {
@@ -241,15 +231,7 @@ a:hover{
 .stories a {
     text-decoration: none;
     color: #5A67D8;
-    
 }
-
-/* remove below 1 */
-.container ~ article{
-    margin-top: 100px;
-    background-color: blue;
-}
-
 
 .newsletter{
     clear: both;
