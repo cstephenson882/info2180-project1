@@ -1,12 +1,37 @@
 /* Add your CSS to this file */
 
+
 :root{
+    --hero-overview-color: #E2E8F0;
     --green-color: green; 
-    --testing-background-color: lightblue;
+    
+    --covid19-test-bacckground-color: #4A5568;
+    --nav-link-color: #6b7280;
+    --nav-link-hover-color: #5A67D8;
+    --newletter-background-color: #48BB78;
+    --footer-background-color: #4A5568;
+
 }
+*{
+    font-size: 18px;
+}
+
 body {
-    margin: 0;
+   
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    font-family:apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+    /* font-size: 18px; */
+
+   
+}
+
+header {
+    background-color: white; 
+    /* height: 400px; */
 }
 
 .container {
@@ -17,36 +42,46 @@ body {
 }
 header .container {
     display: grid;
-    /* flex-direction: center;
-    flex-direction: row; */
-    
-    /* flex-direction: column; */
-    /* display: inline; */
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    /* grid-template-rows: 1fr; */
+    grid-template-columns: 2fr auto 1.fr;
 }
 
 header h1 {
     grid-column: 1/2;
 }
 
+header nav{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: 30px; */
+
+}
+
 /*  */
 header h1, header li {
     font-size: 18px;
+    /* display: flex; */
     
-}
-
-header nav{
-    grid-column: 3/4;
 }
 
 li{
     display: inline;
-    /* up to part 3 */
+    list-style-type: none;
+    margin: 5px;
+
+}
+
+header a{
+    text-decoration: none;
+    color: var(--nav-link-color);
+
+}
+a:hover{
+    color: var(--nav-link-hover-color);
 }
 
 .overview-hero {
-    background-color: grey; /*color to be updated*/
+    background-color: var(--hero-overview-color); /*color to be updated*/
     width: max;
     height: 300px;
 }
@@ -56,6 +91,7 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .overview-hero-image{
     width: 200px;
@@ -65,10 +101,10 @@ li{
     
 }
 .overview-hero-text {
-    width: 30em;
+    width: 570px;
 }
 .overview-hero .container{
-    gap: 30px;  
+    gap: 100px;  
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -77,6 +113,11 @@ li{
     
     /* flex-wrap: wrap; */
     /* grid-template-columns: ; */
+}
+
+.overview-hero h2{
+    /* color: #48BB78; */
+    /* font-size: 24px; */
 }
 
 /*  Leanrn about styling */
@@ -88,70 +129,140 @@ li{
     grid-template-rows: 0.1fr 1fr;
     gap: 10px;
 }
-
-
 .learn-about h2 {
-    grid-row: 1;
-    grid-column: 1/4;
-    
+    color: #48BB78; 
+    font-size: 24px;
 }
 
-.card img{
+.learn-about .card img{
     width: 200px;
     height: 200px;
+    /* display: flex;
+    justify-content: center; */
 }
 
-.cards{
+.learn-about .cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
-}
-
-/* Styling the testting section */
-.testing {
-    background-color: var(--testing-background-color); /* to be updated*/
-    height: 200px;
-}
-
-.testing .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-   
-
-}
-
-.cta , .testing-description, .testing{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    
     
 }
 
+.learn-about .card{
+    /* width: 200px; */
+    border: 1px solid #E2E8F0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    /* credit to https://getcssscan.com/css-box-shadow-examples for the shodow idea */
+    text-align: center;
+}
+
+.learn-about .card h3{
+    color: #48BB78;
+    font-size: 21px;
+    margin-top: 70px;
+    text-align: left;
+}
+
+.learn-about .card p {
+    text-align: left;
+}
+
+/* Styling the testing section */
+.testing {
+    background-color: var(--covid19-test-bacckground-color); /* to be updated*/
+    height: 200px;
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* .testing .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+} */
+.cta{
+    background-color: #48BB78;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+   
+}
+.cta a {
+    color: white;
+    text-decoration: none;
+}
+
+.testing .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+.testing-desciption{
+    max-width: 600px;
+}
 
 /* Stories section */
+.stories{
+    margin-top: 80px;
+}
 .stories img{
     width: 200px;
     height: 200px;
     float: left;
     margin-right: 30px;
+    border-radius: 50%;
+    background-color: lightgrey;
 }
 
 .stories .container {
     display: grid;
     /* grid-template-columns: 1fr 2fr; */
-    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    gap: 50px;
 }
 
+.stories h2{
+    color: #5A67D8;
+    font-size: 18px;
+}
+.stories a {
+    text-decoration: none;
+    color: #5A67D8;
+    
+}
+
+/* remove below 1 */
+.container ~ article{
+    margin-top: 100px;
+    background-color: blue;
+}
+
+
 .newsletter{
+    clear: both;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--green-color);
+    background-color: var(--newletter-background-color);
     height: 250px;
     margin-top: 50px;
     margin-bottom: 0px;
+    color: white;
+    
 }
 
 .newsletter .container {
@@ -173,12 +284,29 @@ li{
 }
 .newsletter button {
     margin-left: 30px;
-    
+    width: 150px;
+    height: 50px;
+    background-color: #5A67D8;
+    border-radius: 5px;
+    border: 0px;
+}
+.form-group input{
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0px;
+    /* font-size: 18px; */
 }
 
 
+
 footer{
-    background-color: var(--testing-background-color);
+   
+    background-color: var(--footer-background-color);
     margin: 0px;
-    height: 100px;
+    height: 75px;
+    clear: both;
+    display: flex;
+    align-items: center;
+    color: white;
 }
