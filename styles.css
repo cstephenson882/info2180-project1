@@ -289,6 +289,7 @@ a:hover{
     background-color: #5A67D8;
     border-radius: 5px;
     border: 0px;
+    color: white;
 }
 .form-group input{
     width: 300px;
